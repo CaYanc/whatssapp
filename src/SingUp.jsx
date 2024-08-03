@@ -8,7 +8,8 @@ const SingUp = () => {
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         const user = userCredential.user;
-        navigate("/login");
+        navigate("/");
+
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -33,7 +34,7 @@ const SingUp = () => {
 
         <p className="text-[10px]">
           ¿Tines cuneta?
-          <Link to={"/login"} className="font-bold">
+          <Link to={"/"} className="font-bold">
             Login
           </Link>
         </p>

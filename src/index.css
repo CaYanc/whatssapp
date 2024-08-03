@@ -1,3 +1,59 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.fondo_mensajes {
+  background-image: url("https://i.pinimg.com/originals/e0/0b/9a/e00b9a6bce8958583185fd2b49dd6c74.jpg");
+  background-position: center;
+  background-size: contain;
+}
+
+.menu2 {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .content_home {
+    position: relative;
+    overflow: visible;
+
+    .contenedor_chat {
+      width: 100%;
+
+      .chat {
+        position: absolute;
+        width: 100%;
+        left: 0;
+
+        .menu2 {
+          display: block;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+
+        .menu1 {
+          display: none;
+        }
+      }
+    }
+    .contenedor_mensajes {
+      width: 100%;
+
+      .mensajes {
+        position: absolute;
+        transition: all 0.4s;
+        width: 100%;
+        left: 0%;
+        z-index: 100;
+        border-radius: 20px;
+
+        .form_mensaje {
+          background-image: url("https://i.pinimg.com/originals/e0/0b/9a/e00b9a6bce8958583185fd2b49dd6c74.jpg");
+          background-position: center;
+          background-size: contain;
+        }
+      }
+    }
+  }
+}
